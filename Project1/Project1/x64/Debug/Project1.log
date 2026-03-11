@@ -1,0 +1,5 @@
+﻿  소스.c
+C:\Users\USER\Documents\data-structure-lab 2026-4\Project1\Project1\소스.c(4,9): warning C4047: '함수': 'const char *const '의 간접 참조 수준이 'int'과(와) 다릅니다.
+C:\Users\USER\Documents\data-structure-lab 2026-4\Project1\Project1\소스.c(4,9): warning C4024: 'printf': 형식 및 실제 매개 변수 1의 형식이 서로 다릅니다.
+C:\Users\USER\Documents\data-structure-lab 2026-4\Project1\Project1\소스.c(5,9): error C2015: 상수에 문자가 너무 많습니다.
+C:\Users\USER\Documents\data-structure-lab 2026-4\Project1\Project1\소스.c(5,32): warning C4013: 'add_tmp'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
