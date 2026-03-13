@@ -1,8 +1,9 @@
 repository
-repository = 프로젝트 저장소
+repository = 프로젝트 저장소 - git으로 관리가됨
 코드 + 파일 + 변경 기록을 함께 관리하는 곳
 GitHub에서 협업할 때 기본 단위
 비유하면
 GitHub = 클라우드 서비스 (창고 건물)
 Repository = 그 안에 있는 하나의 프로젝트 폴더
 
+push - 업로드하는 작업
