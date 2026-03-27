@@ -7,3 +7,19 @@ GitHub = 클라우드 서비스 (창고 건물)
 Repository = 그 안에 있는 하나의 프로젝트 폴더
 
 push - 업로드하는 작업
+
+상태란
+멤버변수, attribute, field
+
+행위란
+method, 멤버함수
+
+private 아무것도 없이 변수 선언하면 기본이 private
+public 
+protected 자식클래스는 접근가능하다 외부는 불가
+
+#pragma once 여러곳에서 호출할때 에러방지 역할
+
+%lf double
+%d int
+%s 문자열
