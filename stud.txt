@@ -1,3 +1,24 @@
+깃허브 올리는법
+1. 로컬과 원격저장소 연결
+▪ $ git remote add origin https://github.com/(your_username)/(Repository_name).git 
+2. 잘 연결되었는지 확인
+▪ $ git remote -v
+3.로컬 저장소의 커밋을 push 명령어로 원격저장소에 올리기
+▪ $ git push –u origin master
+4. 원격저장소에서 내려받기 (Clone)
+▪ $git clone https://github.com/johg15/data-structure-lab.git .
+▪ 내려받기 확인
+5. 다른 작업 폴더에서 다시 내려받기
+▪ $ git pull origin master
+6. 로컬저장소에서 수정 후 올리기
+▪ $git add .
+▪ $git commit –m “hi”
+▪ $git push origin master
+7. 수정된 사항 다시 내려받기
+▪ 다른 작업 폴더에서 다시 내려받기
+▪ $ git pull origin master
+
+
 repository
 repository = 프로젝트 저장소 - git으로 관리가됨
 코드 + 파일 + 변경 기록을 함께 관리하는 곳
@@ -23,3 +44,10 @@ protected 자식클래스는 접근가능하다 외부는 불가
 %lf double
 %d int
 %s 문자열
+
+polynomial() - 생성자 함수
+
+디버깅 모드 F5
+실행 ctl + F5
+
+
