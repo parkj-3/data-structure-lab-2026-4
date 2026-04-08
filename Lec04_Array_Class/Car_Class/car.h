@@ -28,7 +28,7 @@ class Car {
 class SportsCar : public Car
 {
 public:
-	using Car::Car;
+	using Car::Car; //SportsCar에 Car값 그대로 사용 
 
 	bool bTurbo; // 터보 장치 ON?
 	void setTurbo(bool bTur) { bTurbo = bTur; }
