@@ -2,6 +2,7 @@
 #include "pet.h"
 #include "music.h"
 using namespace std;
+
 int main() {
 	//rectangle 1 객체 생성
 	rectangle rect1(3.4, 2.5);
@@ -26,7 +27,7 @@ int main() {
 	//음악 service에 추가하기
 	myService.addMusic("SWIM", "BTS", "ARIRANG", 2026);
 	myService.addMusic("RUDE", "HE2HE", "RUDE", 2026);
-	myService.addMusic("BANDBANG", "IVE", "REVIVE", 2026);
+	myService.addMusic("BANGBANG", "IVE", "REVIVE", 2026);
 
 	//title로 search
 	string music_title;
@@ -41,4 +42,20 @@ int main() {
 	else {
 		cout << "Not Found" << endl;
 	}
+
+	string artist_name;
+	cout << "Enter the Artist Name: ";
+	cin >> artist_name;
+
+	vector<music*> artistResult = myService.searchByArtist(artist_name);
+	if (artistResult.size() > 0) {
+		cout << "Found" << artistResult.size() << " songs by " << artist_name << " : " << endl;
+		for (int i = 0; i < artistResult.size(); i++) {
+			cout << artistResult[i]->getTitle() << endl;
+		}
+	}
+	else {
+		cout << "Not Found" << endl;
+	}
+	return 0;
 }

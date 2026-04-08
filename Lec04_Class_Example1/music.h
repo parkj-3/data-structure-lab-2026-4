@@ -48,7 +48,19 @@ public:
 		for (int i = 0; i < musicList.size(); i++) {
 			if (musicList[i].getTitle() == title)
 				return &musicList[i];
+				//return &musicList[i]; 이거랑 musicList + i 랑 같다
 		}
 		return NULL;
+	}
+	//Artist로 검색하기
+	vector<music*> searchByArtist(string artist) {
+		vector<music*> result;
+		//musicList에 있는 artist와 입력 artist가 같으면 result에 push_back
+	for (int i = 0; i < musicList.size(); i++) {
+		if (musicList[i].getArtist() == artist) {
+			result.push_back(&musicList[i]);
+		}
+	}
+	return result;
 	}
 };
