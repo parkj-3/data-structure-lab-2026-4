@@ -4,13 +4,13 @@ using namespace std;
 #define HEIGHT 8
 #define WIDTH 8
 
-int getMaxBrightness(int image[HEIGHT][WIDTH]) {
-    int maxVal = image[0][0];
+int findMaxPixel(int a[][8], int h, int w) {
+    int maxVal = a[0][0];
 
-    for (int i = 0; i < HEIGHT; i++) {
-        for (int j = 0; j < WIDTH; j++) {
-            if (image[i][j] > maxVal) {
-                maxVal = image[i][j];
+    for (int i = 0; i < h; i++) {
+        for (int j = 0; j < w; j++) {
+            if (a[i][j] > maxVal) {
+                maxVal = a[i][j];
             }
         }
     }
@@ -29,7 +29,7 @@ int main() {
         {5, 20, 40, 70, 105, 140, 160, 90}
     };
 
-    int maxBrightness = getMaxBrightness(image);
+    int maxBrightness = findMaxPixel(image, HEIGHT, WIDTH);
     cout << "최대 화소 밝기: " << maxBrightness << endl;
 
     return 0;
