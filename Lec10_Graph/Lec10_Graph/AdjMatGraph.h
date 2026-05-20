@@ -119,7 +119,7 @@ public:
 
     bool isLinked(int u, int v) { return getEdge(u, v) != 0; }
 
-    // 깊이 우선 탐색 함수
+    // 깊이 우선 탐색 함수z  
     void DFS(int v) {
         visited[v] = true;              // 현재 정점을 방문함
         printf("%c ", getVertex(v));    // 정점의 이름 출력
