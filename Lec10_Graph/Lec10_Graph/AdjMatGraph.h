@@ -1,6 +1,6 @@
 #include <stdio.h>
 #define MAX_VTXS 100
-
+#define INF 9999
 
 class AdjMatGraph {
 protected:
@@ -35,17 +35,17 @@ public:
         setEdge(u, v, 1);
         setEdge(v, u, 1); // 방향 그래프에서는 삭제됨(<u,v>만 존재)
     }
-
+    
     // 그래프 정보 출력 (화면이나 파일에 출력)
     void display(FILE* fp = stdout) {
         fprintf(fp, "%d\n", size);   // 정점의 개수 출력
         for (int i = 0; i < size; i++) {
             fprintf(fp, "%c ", getVertex(i));   // 정점의 이름 출력
             for (int j = 0; j < size; j++)       // 간선 정보 출력
-                fprintf(fp, " %3d", getEdge(i, j));
-            fprintf(fp, "\n");
+                fprintf(fp, " %4d", getEdge(i, j));
         }
-    }
+        fprintf(fp, "\n");
+        }
 };
 
 /*
@@ -130,5 +130,34 @@ public:
     }
 };
 
+class WGraph : public AdjMatGraph {
+public:
+    void insertEdge(int u, int v, int weight) {
+        if (weight > INF)
+            weight = INF;
+        setEdge(u, v, weight);
+    }
+    bool hasEdge(int u, int v, int weight) {
+        return(getEdge(i, j) < INF);
+    }
 
-
+    void load(const char* filename) {
+        FILE* fp;
+        fopen_s(&fp, filename, "r");
+        if (fp != NULL) {
+            int n, val;
+            fscanf_s(fp, "%d", &n);
+            for (int i = 0; i < n; i++) {
+                char str[80];
+                int val;
+                fscanf_s(fp, "%s", str, sizeof(str));
+                insetVertex(str[0]);
+                for (int j = 0; j < n; j++) {
+                    fscanf_s(fp, "%d", &val);
+                    insertEdge)(i, j, val);
+                }
+            }
+        }
+        fclose(fp);
+    }
+};
